@@ -1,102 +1,44 @@
-# Factory Inventory Management System
+# Partner Basecamp · Session Materials
 
-A full-stack demo application for a Claude Code workshop — inventory management, order tracking, demand forecasting, and analytics for factory operations.
-
-![Dashboard](docs/dashboard-screenshot.png)
-
-## Tech Stack
-
-- **Frontend**: Vue 3 + Vite (port 3000)
-- **Backend**: Python FastAPI (port 8001)
-- **Data**: In-memory mock data (no database)
-
-## Features
-
-- Dashboard with interactive filtering and key metrics
-- Inventory tracking across multiple warehouses
-- Order management with status tracking
-- Demand forecasting with trend analysis
-- Backlog monitoring
-- Spending analytics
-
-## Quick Start
-
-**One-command startup:**
-```bash
-./scripts/start.sh
-# Starts both backend and frontend
-# Backend: http://localhost:8001
-# Frontend: http://localhost:3000
-# API Docs: http://localhost:8001/docs
-```
-
-**Manual startup:**
-
-Backend:
-```bash
-cd server
-uv venv && uv sync
-uv run python main.py
-```
-
-Frontend:
-```bash
-cd client
-npm install
-npm run dev
-```
-
-## API Endpoints
-
-All endpoints support optional filtering via query params: `warehouse`, `category`, `status`, `month`
-
-- `GET /api/inventory` - Inventory items
-- `GET /api/orders` - Orders
-- `GET /api/demand` - Demand forecasts
-- `GET /api/backlog` - Backlog items
-- `GET /api/dashboard/summary` - Summary statistics
-- `GET /api/spending/*` - Spending data
-
-## Demo Data
-
-Mock data includes:
-- Inventory items (Circuit Boards, Sensors, Actuators, Controllers)
-- Orders spanning 12 months (Delivered, Shipped, Processing, Backordered)
-- Demand forecasts with trends
-- Backlog items
-- Spending transactions
-
-Data files: `server/data/*.json`
-
-## Production Build
-
-```bash
-cd client
-npm run build  # Output: client/dist/
-```
-
-## Platform Notes
-
-**macOS/Linux:** The one-command startup script (`./scripts/start.sh`) and stop script (`./scripts/stop.sh`) work out of the box.
-
-**Windows:** The shell scripts in `scripts/` are macOS/Linux only. Use the manual startup commands instead — run each in a separate terminal:
-
-Backend:
-```bash
-cd server
-uv venv && uv sync
-uv run python main.py
-```
-
-Frontend:
-```bash
-cd client
-npm install
-npm run dev
-```
-
-To stop the servers, press Ctrl+C in each terminal window.
+This repository contains all notebooks and supporting files for Partner Basecamp sessions. Materials are organized by day and session in the order they run.
 
 ---
 
-**Note:** Demo application with in-memory data. Not production-ready without database, authentication, and security implementation.
+## How to download
+
+### Option A — Download as ZIP (no Git required)
+1. Click the green **Code** button at the top right of this page.
+2. Select **Download ZIP**.
+3. Unzip the file on your computer — you'll get a `colab-public-download-main` folder with everything inside.
+
+### Option B — Clone with Git
+```bash
+git clone https://github.com/victorsteeb/colab-public-download.git
+```
+
+---
+
+## What's inside
+
+### Day 1
+| Folder | Session | Type |
+|--------|---------|------|
+| `day1/01_inventory-management` | Inventory Management (Claude Code workshop app) | Build-Along |
+| `day1/02_developer-platform` | Developer Platform | Build-Along |
+| `day1/03_prompt-rescue` | Prompt Rescue | Build-Along |
+| `day1/04_diagnosing-ai-problems` | Diagnosing AI Problems | Session materials |
+
+### Day 2
+| Folder | Session | Type |
+|--------|---------|------|
+| `day2/01_evals` | Evals | Build-Along |
+| `day2/02_inference-optimization` | Inference Optimization | Build-Along |
+| `day2/03_context-engineering` | Context Engineering | Build-Along |
+| `day2/04_agent-build-hackathon` | Agent Build Hackathon | MiniHack |
+
+Each folder has its own README with the exercise description and step-by-step run instructions.
+
+---
+
+## API key
+You'll need an Anthropic API key for all build-along sessions. Each notebook has a cell near the top where you paste it in.
